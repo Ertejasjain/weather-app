@@ -1,0 +1,145 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Container ===== */
+.weather-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  width: 350px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ===== Search Box ===== */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #4facfe;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #00f2fe;
+  transform: scale(1.05);
+}
+
+/* ===== Weather Card ===== */
+.weather-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-card p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.weather-card img {
+  width: 80px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.placeholder {
+  color: #555;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+/* ===== Weather Backgrounds ===== */
+
+/* Default background */
+body {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  background-size: cover;
+  background-position: center;
+  transition: background 1s ease-in-out;
+}
+
+/* Sunny */
+.sunny {
+  background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b') no-repeat center center/cover;
+}
+
+/* Cloudy */
+.cloudy {
+  background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29') no-repeat center center/cover;
+}
+
+/* Rainy */
+.rainy {
+  background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?blend=000000&sat=-100&exp=-20') no-repeat center center/cover;
+}
+
+/* Snowy */
+.snowy {
+  background: url('https://images.unsplash.com/photo-1608889175153-41a4f3af0a2f') no-repeat center center/cover;
+}
+
+/* Clear Night */
+.clear-night {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+}
